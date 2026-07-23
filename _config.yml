@@ -1,0 +1,28 @@
+title: LIGHT — Deployable Small Foundation Models
+description: NeurIPS 2026 Workshop on Compact, Trustworthy and Energy-Efficient AI Systems
+theme: minima
+
+url: "https://your-github-username.github.io"
+baseurl: "/LIGHT-NeurIPS2026-Website-Professional"
+
+markdown: kramdown
+highlighter: rouge
+
+header_pages:
+  - cfp.md
+  - dates.md
+  - organizers.md
+  - committee.md
+  - speakers.md
+  - schedule.md
+  - contact.md
+
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
