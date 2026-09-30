@@ -7,6 +7,87 @@
   <meta name="description" content="Tentative workshop schedule for LIGHT.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Schedule-specific layout: wider time column and dedicated content column. */
+    .schedule {
+      display: grid;
+      gap: 14px;
+    }
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      column-gap: 30px;
+      align-items: start;
+      padding: 24px 26px;
+    }
+    .schedule-item > span {
+      display: block;
+      white-space: nowrap;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .01em;
+      line-height: 1.35;
+    }
+    .schedule-item > strong {
+      display: block;
+      min-width: 0;
+      line-height: 1.35;
+    }
+    .schedule-item > p {
+      grid-column: 2;
+      margin: 10px 0 0;
+      min-width: 0;
+      line-height: 1.6;
+    }
+    .schedule-item > p.paper-list {
+      display: grid;
+      gap: 9px;
+    }
+    .schedule-item > p.paper-list em {
+      font-style: normal;
+    }
+    .schedule-item.break,
+    .schedule-item.transition {
+      min-height: 0;
+      align-items: center;
+    }
+    .schedule-item.break > p,
+    .schedule-item.transition > p {
+      margin: 0;
+    }
+    .schedule-item.keynote > p,
+    .schedule-item.panel > p,
+    .schedule-item.industry > p {
+      font-size: 1rem;
+    }
+    .schedule-item.keynote,
+    .schedule-item.industry {
+      border-color: rgba(116, 167, 238, .18);
+    }
+    .schedule-item.panel {
+      border-color: rgba(186, 129, 218, .20);
+    }
+    @media (max-width: 800px) {
+      .schedule-item {
+        grid-template-columns: 110px minmax(0, 1fr);
+        column-gap: 20px;
+        padding: 20px;
+      }
+    }
+    @media (max-width: 620px) {
+      .schedule-item {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+      }
+      .schedule-item > p {
+        grid-column: 1;
+        margin-top: 4px;
+      }
+      .schedule-item > span {
+        font-size: .95rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -37,15 +118,101 @@
     </div>
 
     <section class="schedule">
-      <div class="schedule-item"><span>09:00–09:15</span><strong>Welcome</strong><p>Opening remarks and workshop overview</p></div>
-      <div class="schedule-item"><span>09:15–10:00</span><strong>Opening Keynote</strong><p>Vision for deployable, trustworthy and efficient AI systems</p></div>
-      <div class="schedule-item"><span>10:00–11:00</span><strong>Research Session I</strong><p>Distillation, compression and compact foundation models</p></div>
-      <div class="schedule-item"><span>11:15–12:00</span><strong>Panel Discussion</strong><p>Can small models outperform large models in real-world environments?</p></div>
-      <div class="schedule-item"><span>12:00–13:00</span><strong>Research Session II</strong><p>Trustworthy, neuro-symbolic and verifiable small AI systems</p></div>
-      <div class="schedule-item"><span>14:00–15:00</span><strong>Poster & Networking</strong><p>Interactive discussion, demos and networking</p></div>
-      <div class="schedule-item"><span>15:00–16:00</span><strong>Research Session III</strong><p>Edge AI, systems and deployment</p></div>
-      <div class="schedule-item"><span>16:15–16:45</span><strong>Industry Session</strong><p>Industrial deployment case studies</p></div>
-      <div class="schedule-item"><span>16:45–17:00</span><strong>Closing Debate</strong><p>Future of deployable and trustworthy AI systems</p></div>
+      <div class="schedule-item">
+        <span>09:00–09:15</span>
+        <strong>Welcome</strong>
+        <p>Opening remarks and workshop overview</p>
+      </div>
+
+      <div class="schedule-item keynote">
+        <span>09:15–09:50</span>
+        <strong>Keynote</strong>
+        <p>Roman Orús — Multiverse Computing</p>
+      </div>
+
+      <div class="schedule-item">
+        <span>10:00–11:00</span>
+        <strong>Research Session I — Compression, Distillation &amp; Efficient Model Design</strong>
+        <p class="paper-list">
+          <span>#12 — <em>Small Models Are Views, Not Artifacts: The Case for Random-Access Compressed Model Storage</em></span>
+          <span>#22 — <em>Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs</em></span>
+          <span>#35 — <em>XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</em></span>
+          <span>#36 — <em>Same Score, Different Model: Two Regimes of Quantization Damage Below and Above the Accuracy Plateau</em></span>
+        </p>
+      </div>
+
+      <div class="schedule-item break">
+        <span>11:00–11:15</span>
+        <strong>Coffee Break</strong>
+        <p></p>
+      </div>
+
+      <div class="schedule-item panel">
+        <span>11:15–12:00</span>
+        <strong>Panel — Can Small Models Outperform Large Models in Real-World Environments?</strong>
+        <p>Panel participants to be confirmed</p>
+      </div>
+
+      <div class="schedule-item">
+        <span>12:00–13:00</span>
+        <strong>Research Session II — Trustworthy, Reliable &amp; Verifiable Small Models</strong>
+        <p class="paper-list">
+          <span>#9 — <em>When BitsAndBytes Changes the Evaluator: Reliability of 8/4-Bit LLM Judges</em></span>
+          <span>#51 — <em>A Guarantee That Costs One Bit: Certified Few-Shot Prompt Adaptation for Deployable Vision–Language Models</em></span>
+          <span>#56 — <em>My Graph Doesn’t Help! Analyzing Causal Graph Construction, Representation, and Utility in LLMs</em></span>
+          <span>#60 — <em>Towards Trustworthy Compact Judges: What Human Labels Can and Cannot Fix in Compact AI Judges</em></span>
+        </p>
+      </div>
+
+      <div class="schedule-item break">
+        <span>13:00–14:00</span>
+        <strong>Lunch Break</strong>
+        <p></p>
+      </div>
+
+      <div class="schedule-item keynote">
+        <span>14:00–14:35</span>
+        <strong>Keynote</strong>
+        <p>Elisabetta Farella — FBK</p>
+      </div>
+
+      <div class="schedule-item">
+        <span>14:35–15:35</span>
+        <strong>Poster &amp; Networking Session</strong>
+        <p>All accepted papers; poster discussion, demos and networking</p>
+      </div>
+
+      <div class="schedule-item">
+        <span>15:35–16:35</span>
+        <strong>Research Session III — Small Models in Real-World Systems &amp; Applications</strong>
+        <p class="paper-list">
+          <span>#28 — <em>Small Talk: Literature Review with Locally-Hosted Small Language Models</em></span>
+          <span>#33 — <em>Explainability-Guided History Distillation for Efficient Sequential Recommendation</em></span>
+          <span>#68 — <em>Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers</em></span>
+          <span>#77 — <em>A 127K-Parameter Cell in a Fixed Horner Program: Exactness, Compression, and a Verified Scaffold for Cross-Prime Modular Multiplication</em></span>
+        </p>
+      </div>
+
+      <div class="schedule-item break">
+        <span>16:35–16:50</span>
+        <strong>Coffee Break</strong>
+        <p></p>
+      </div>
+
+      <div class="schedule-item industry">
+        <span>16:50–17:20</span>
+        <strong>Industry Session — Lightweight AI in Production</strong>
+        <p class="paper-list">
+          <span>#30 — <em>From Clicks to Intent: Distilling LLM Intent Understanding into Compact, Deployable Models in Financial Services</em> — Capital One</span>
+          <span>#65 — <em>On-device High-Resolution Image Editing with Hallucination-Aware Loss and Adaptive Tiling</em> — Samsung Research</span>
+        </p>
+      </div>
+
+      <div class="schedule-item">
+        <span>17:20–17:30</span>
+        <strong>Closing Debate — What Makes a Small Model Actually Better?</strong>
+        <p>Final discussion and takeaways</p>
+      </div>
     </section>
   </main>
 
