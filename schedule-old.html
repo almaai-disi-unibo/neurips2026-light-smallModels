@@ -46,14 +46,6 @@
     .schedule-item > p.paper-list em {
       font-style: normal;
     }
-    .paper-list small {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted, #6b7280);
-      font-size: .92rem;
-      line-height: 1.45;
-    }
-
     .schedule-item.break,
     .schedule-item.transition {
       min-height: 0;
@@ -127,98 +119,98 @@
 
     <section class="schedule">
       <div class="schedule-item">
-        <span>08:30–08:45</span>
-        <strong>Welcome &amp; Workshop Overview</strong>
-        <p>Opening remarks and overview of LIGHT</p>
+        <span>09:00–09:15</span>
+        <strong>Welcome</strong>
+        <p>Opening remarks and workshop overview</p>
       </div>
 
       <div class="schedule-item keynote">
-        <span>08:45–09:20</span>
-        <strong>Opening Keynote</strong>
-        <p>Speaker to be announced</p>
+        <span>09:15–09:50</span>
+        <strong>Keynote</strong>
+        <p>Roman Orús — Multiverse Computing</p>
       </div>
 
       <div class="schedule-item">
-        <span>09:20–10:20</span>
+        <span>10:00–11:00</span>
         <strong>Research Session I — Compression, Distillation &amp; Efficient Model Design</strong>
         <p class="paper-list">
-          <span>#12 — <em>Small Models Are Views, Not Artifacts: The Case for Random-Access Compressed Model Storage</em><small>Ritwick Ghosh</small></span>
-          <span>#22 — <em>Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs</em><small>Jakob Steimle, Thomas Elsken, Daniel Ehrhardt, Lukas Rinder, Daniel Cremers, Xi Wang</small></span>
-          <span>#35 — <em>XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</em><small>Jundong Hu, Shekar Ramachandran</small></span>
-          <span>#36 — <em>Same Score, Different Model: Two Regimes of Quantization Damage Below and Above the Accuracy Plateau</em><small>Raj Shah</small></span>
+          <span>#12 — <em>Small Models Are Views, Not Artifacts: The Case for Random-Access Compressed Model Storage</em></span>
+          <span>#22 — <em>Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs</em></span>
+          <span>#35 — <em>XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</em></span>
+          <span>#36 — <em>Same Score, Different Model: Two Regimes of Quantization Damage Below and Above the Accuracy Plateau</em></span>
         </p>
       </div>
 
       <div class="schedule-item break">
-        <span>10:20–10:40</span>
+        <span>11:00–11:15</span>
         <strong>Coffee Break</strong>
         <p></p>
       </div>
 
       <div class="schedule-item panel">
-        <span>10:40–11:15</span>
+        <span>11:15–12:00</span>
         <strong>Panel — Can Small Models Outperform Large Models in Real-World Environments?</strong>
-        <p>Panel participants to be announced</p>
+        <p>Panel participants to be confirmed</p>
       </div>
 
       <div class="schedule-item">
-        <span>11:15–12:15</span>
+        <span>12:00–13:00</span>
         <strong>Research Session II — Trustworthy, Reliable &amp; Verifiable Small Models</strong>
         <p class="paper-list">
-          <span>#9 — <em>When BitsAndBytes Changes the Evaluator: Reliability of 8/4-Bit LLM Judges</em><small>Mann Patira</small></span>
-          <span>#51 — <em>A Guarantee That Costs One Bit: Certified Few-Shot Prompt Adaptation for Deployable Vision–Language Models</em><small>Keisuke Yokota</small></span>
-          <span>#56 — <em>My Graph Doesn’t Help! Analyzing Causal Graph Construction, Representation, and Utility in LLMs</em><small>Aman Syed, Benjamin Li</small></span>
-          <span>#60 — <em>Towards Trustworthy Compact Judges: What Human Labels Can and Cannot Fix in Compact AI Judges</em><small>Suchir Salhan, Mingchuan Zou, Paula Buttery</small></span>
+          <span>#9 — <em>When BitsAndBytes Changes the Evaluator: Reliability of 8/4-Bit LLM Judges</em></span>
+          <span>#51 — <em>A Guarantee That Costs One Bit: Certified Few-Shot Prompt Adaptation for Deployable Vision–Language Models</em></span>
+          <span>#56 — <em>My Graph Doesn’t Help! Analyzing Causal Graph Construction, Representation, and Utility in LLMs</em></span>
+          <span>#60 — <em>Towards Trustworthy Compact Judges: What Human Labels Can and Cannot Fix in Compact AI Judges</em></span>
         </p>
       </div>
 
       <div class="schedule-item break">
-        <span>12:15–13:15</span>
+        <span>13:00–14:00</span>
         <strong>Lunch Break</strong>
         <p></p>
       </div>
 
       <div class="schedule-item keynote">
-        <span>13:15–13:50</span>
-        <strong>Afternoon Keynote</strong>
-        <p>Speaker to be announced</p>
+        <span>14:00–14:35</span>
+        <strong>Keynote</strong>
+        <p>Elisabetta Farella — FBK</p>
       </div>
 
       <div class="schedule-item">
-        <span>13:50–14:50</span>
-        <strong>Research Session III — Small Models in Real-World Systems &amp; Applications</strong>
-        <p class="paper-list">
-          <span>#28 — <em>Small Talk: Literature Review with Locally-Hosted Small Language Models</em><small>Timothy Joseph Welch, Isabella Illari, Bryan Edward Kaiser</small></span>
-          <span>#33 — <em>Explainability-Guided History Distillation for Efficient Sequential Recommendation</em><small>Akash Pandey, Addrish Roy, Kanisha Shah, Akshat Shreemali, Dwipam Katariya, Swapnil Shinde, Amanda Ding, Kalanand Mishra, Pranab Mohanty</small></span>
-          <span>#68 — <em>Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers</em><small>Santhosh Kumar Kasa, Siva Rajesh Kasa, Sumit Negi</small></span>
-          <span>#77 — <em>A 127K-Parameter Cell in a Fixed Horner Program: Exactness, Compression, and a Verified Scaffold for Cross-Prime Modular Multiplication</em><small>Rob Sneiderman</small></span>
-        </p>
-      </div>
-
-      <div class="schedule-item break">
-        <span>14:50–15:20</span>
-        <strong>Coffee Break</strong>
-        <p></p>
-      </div>
-
-      <div class="schedule-item industry">
-        <span>15:20–15:50</span>
-        <strong>Industry Session — Lightweight AI in Production</strong>
-        <p class="paper-list">
-          <span>#30 — <em>From Clicks to Intent: Distilling LLM Intent Understanding into Compact, Deployable Models in Financial Services</em><small>Dianjing Fan, Yao Li, Kyaw Hpone Myint, Dwipam Katariya, Alexandre G. R. Day, Pranab Mohanty, Giri Iyengar</small></span>
-          <span>#65 — <em>On-device High-Resolution Image Editing with Hallucination-Aware Loss and Adaptive Tiling</em><small>Young D. Kwon, Abhinav Mehrotra, Malcolm Chadwick, Alberto Gil Couto Pimentel Ramos, Sourav Bhattacharya</small></span>
-        </p>
-      </div>
-
-      <div class="schedule-item">
-        <span>15:50–16:45</span>
+        <span>14:35–15:35</span>
         <strong>Poster &amp; Networking Session</strong>
         <p>All accepted papers; poster discussion, demos and networking</p>
       </div>
 
       <div class="schedule-item">
-        <span>16:45–17:00</span>
-        <strong>Closing Discussion &amp; Takeaways — What Makes a Small Model Actually Better?</strong>
+        <span>15:35–16:35</span>
+        <strong>Research Session III — Small Models in Real-World Systems &amp; Applications</strong>
+        <p class="paper-list">
+          <span>#28 — <em>Small Talk: Literature Review with Locally-Hosted Small Language Models</em></span>
+          <span>#33 — <em>Explainability-Guided History Distillation for Efficient Sequential Recommendation</em></span>
+          <span>#68 — <em>Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers</em></span>
+          <span>#77 — <em>A 127K-Parameter Cell in a Fixed Horner Program: Exactness, Compression, and a Verified Scaffold for Cross-Prime Modular Multiplication</em></span>
+        </p>
+      </div>
+
+      <div class="schedule-item break">
+        <span>16:35–16:50</span>
+        <strong>Coffee Break</strong>
+        <p></p>
+      </div>
+
+      <div class="schedule-item industry">
+        <span>16:50–17:20</span>
+        <strong>Industry Session — Lightweight AI in Production</strong>
+        <p class="paper-list">
+          <span>#30 — <em>From Clicks to Intent: Distilling LLM Intent Understanding into Compact, Deployable Models in Financial Services</em> — Capital One</span>
+          <span>#65 — <em>On-device High-Resolution Image Editing with Hallucination-Aware Loss and Adaptive Tiling</em> — Samsung Research</span>
+        </p>
+      </div>
+
+      <div class="schedule-item">
+        <span>17:20–17:30</span>
+        <strong>Closing Debate — What Makes a Small Model Actually Better?</strong>
         <p>Final discussion and takeaways</p>
       </div>
     </section>
