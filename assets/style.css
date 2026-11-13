@@ -290,3 +290,57 @@ h1{font-size:clamp(2.2rem,5vw,4.6rem);margin-bottom:.85rem}
   .schedule-item{grid-template-columns:1fr}
   .timeline-item{flex-direction:column;align-items:flex-start}
 }
+
+/* Workshop venue information */
+
+.venue-info {
+  margin: 0 0 28px;
+  padding: 24px 28px;
+  border: 1px solid rgba(116, 167, 238, .25);
+  border-radius: 14px;
+  background: rgba(116, 167, 238, .06);
+}
+
+.venue-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted, #6b7280);
+}
+
+.venue-info h2 {
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.venue-location {
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+
+.venue-note {
+  margin: 0 0 14px;
+  line-height: 1.6;
+  color: var(--muted, #6b7280);
+}
+
+.venue-link {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 620px) {
+  .venue-info {
+    padding: 20px;
+  }
+
+  .venue-info h2 {
+    font-size: 1.2rem;
+  }
+}
