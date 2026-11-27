@@ -95,6 +95,13 @@
         font-size: .95rem;
       }
     }
+    .schedule-timezone { color: var(--muted, #6b7280); margin: 0 0 16px; }
+    .recorded-presentations { margin-top: 40px; }
+    .recorded-presentations > p { line-height: 1.6; }
+    .recorded-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+    .recorded-list li { border: 1px solid rgba(116,167,238,.22); border-radius: 12px; padding: 16px 20px; line-height: 1.5; }
+    .recorded-list em { font-style: normal; }
+    .recorded-list small { display: block; margin-top: 5px; color: var(--muted, #6b7280); }
   </style>
 </head>
 <body>
@@ -152,7 +159,8 @@
   </div>
 </div>
 
-    <section class="schedule">
+    <p class="schedule-timezone">All times are local to Paris (CET, UTC+1).</p>
+    <section class="schedule" aria-label="In-person workshop program">
       <div class="schedule-item">
         <span>08:30–08:45</span>
         <strong>Welcome &amp; Workshop Overview</strong>
@@ -162,74 +170,61 @@
       <div class="schedule-item keynote">
         <span>08:45–09:20</span>
         <strong>Opening Keynote</strong>
-        <p>Jezabel R. García & Antonio Tiene — Multiverse Computing</p>
-      </div>
-
-      <div class="schedule-item">
-        <span>09:20–10:20</span>
-        <strong>Research Session I — Compression, Distillation &amp; Efficient Model Design</strong>
-        <p class="paper-list">
-          <span>#12 — <em>Small Models Are Views, Not Artifacts: The Case for Random-Access Compressed Model Storage</em><small>Ritwick Ghosh</small></span>
-          <span>#22 — <em>Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs</em><small>Jakob Steimle, Thomas Elsken, Daniel Ehrhardt, Lukas Rinder, Daniel Cremers, Xi Wang</small></span>
-          <span>#35 — <em>XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</em><small>Jundong Hu, Shekar Ramachandran</small></span>
-          <span>#36 — <em>Same Score, Different Model: Two Regimes of Quantization Damage Below and Above the Accuracy Plateau</em><small>Raj Shah</small></span>
-        </p>
-      </div>
-
-      <div class="schedule-item break">
-        <span>10:20–10:40</span>
-        <strong>Coffee Break</strong>
-        <p></p>
+        <p>Jezabel R. García &amp; Antonio Tiene — Multiverse Computing</p>
       </div>
 
       <div class="schedule-item panel">
-        <span>10:40–11:15</span>
+        <span>09:20–10:00</span>
         <strong>Panel — Can Small Models Outperform Large Models in Real-World Environments?</strong>
         <p>Panel participants to be announced</p>
       </div>
 
+      <div class="schedule-item break">
+        <span>10:00–11:00</span>
+        <strong>Coffee Break &amp; Networking</strong>
+        <p></p>
+      </div>
+
       <div class="schedule-item">
-        <span>11:15–12:15</span>
-        <strong>Research Session II — Trustworthy, Reliable &amp; Verifiable Small Models</strong>
+        <span>11:00–12:00</span>
+        <strong>Research Session I — Efficient and Trustworthy Model Design</strong>
         <p class="paper-list">
-          <span>#9 — <em>When BitsAndBytes Changes the Evaluator: Reliability of 8/4-Bit LLM Judges</em><small>Mann Patira</small></span>
+          <span>#12 — <em>Small Models Are Views, Not Artifacts: The Case for Random-Access Compressed Model Storage</em><small>Ritwick Ghosh</small></span>
+          <span>#22 — <em>Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs</em><small>Jakob Steimle, Thomas Elsken, Daniel Ehrhardt, Lukas Rinder, Daniel Cremers, Xi Wang</small></span>
+          <span>#35 — <em>XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</em><small>Jundong Hu, Shekar Ramachandran — Presenter: Shekar Ramachandran</small></span>
           <span>#51 — <em>A Guarantee That Costs One Bit: Certified Few-Shot Prompt Adaptation for Deployable Vision–Language Models</em><small>Keisuke Yokota</small></span>
-          <span>#56 — <em>My Graph Doesn’t Help! Analyzing Causal Graph Construction, Representation, and Utility in LLMs</em><small>Aman Syed, Benjamin Li</small></span>
-          <span>#60 — <em>Towards Trustworthy Compact Judges: What Human Labels Can and Cannot Fix in Compact AI Judges</em><small>Suchir Salhan, Mingchuan Zou, Paula Buttery</small></span>
         </p>
       </div>
 
+      <div class="schedule-item">
+        <span>12:00–12:30</span>
+        <strong>Open Research Discussion</strong>
+        <p>Efficiency, reliability and verifiability of compact models</p>
+      </div>
+
       <div class="schedule-item break">
-        <span>12:15–13:15</span>
+        <span>12:30–14:00</span>
         <strong>Lunch Break</strong>
         <p></p>
       </div>
 
       <div class="schedule-item keynote">
-        <span>13:15–13:50</span>
+        <span>14:00–14:45</span>
         <strong>Afternoon Keynote</strong>
         <p>Elisabetta Farella — FBK</p>
       </div>
 
       <div class="schedule-item">
-        <span>13:50–14:50</span>
-        <strong>Research Session III — Small Models in Real-World Systems &amp; Applications</strong>
+        <span>14:45–15:15</span>
+        <strong>Research Session II — Small Models in Real-World Systems &amp; Applications</strong>
         <p class="paper-list">
           <span>#28 — <em>Small Talk: Literature Review with Locally-Hosted Small Language Models</em><small>Timothy Joseph Welch, Isabella Illari, Bryan Edward Kaiser</small></span>
           <span>#33 — <em>Explainability-Guided History Distillation for Efficient Sequential Recommendation</em><small>Akash Pandey, Addrish Roy, Kanisha Shah, Akshat Shreemali, Dwipam Katariya, Swapnil Shinde, Amanda Ding, Kalanand Mishra, Pranab Mohanty</small></span>
-          <span>#68 — <em>Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers</em><small>Santhosh Kumar Kasa, Siva Rajesh Kasa, Sumit Negi</small></span>
-          <span>#77 — <em>A 127K-Parameter Cell in a Fixed Horner Program: Exactness, Compression, and a Verified Scaffold for Cross-Prime Modular Multiplication</em><small>Rob Sneiderman</small></span>
         </p>
       </div>
 
-      <div class="schedule-item break">
-        <span>14:50–15:20</span>
-        <strong>Coffee Break</strong>
-        <p></p>
-      </div>
-
       <div class="schedule-item industry">
-        <span>15:20–15:50</span>
+        <span>15:15–15:45</span>
         <strong>Industry Session — Lightweight AI in Production</strong>
         <p class="paper-list">
           <span>#30 — <em>From Clicks to Intent: Distilling LLM Intent Understanding into Compact, Deployable Models in Financial Services</em><small>Dianjing Fan, Yao Li, Kyaw Hpone Myint, Dwipam Katariya, Alexandre G. R. Day, Pranab Mohanty, Giri Iyengar</small></span>
@@ -237,17 +232,36 @@
         </p>
       </div>
 
-      <div class="schedule-item">
-        <span>15:50–16:45</span>
-        <strong>Poster &amp; Networking Session</strong>
-        <p>All accepted papers; poster discussion, demos and networking</p>
+      <div class="schedule-item transition">
+        <span>15:45–16:00</span>
+        <strong>Discussion &amp; Poster Setup</strong>
+        <p></p>
       </div>
 
       <div class="schedule-item">
-        <span>16:45–17:00</span>
+        <span>16:00–17:00</span>
+        <strong>Coffee break &amp; Poster &amp; Networking Session</strong>
+        <p>Poster presentations, demos and networking. </p>
+      </div>
+
+      <div class="schedule-item">
+        <span>17:00–17:15</span>
         <strong>Closing Discussion &amp; Takeaways — What Makes a Small Model Actually Better?</strong>
         <p>Final discussion and takeaways</p>
       </div>
+    </section>
+
+    <section class="recorded-presentations" aria-labelledby="recorded-title">
+      <h2 id="recorded-title">Accepted Oral Contributions — Recorded Presentations</h2>
+      <p>These contributions were accepted for oral presentation at LIGHT. Due to travel or visa constraints, they are not part of the in-person schedule. Recorded presentations will be linked here when available, subject to author consent.</p>
+      <ul class="recorded-list">
+        <li><span>#9 — <em>When BitsAndBytes Changes the Evaluator: Reliability of 8/4-Bit LLM Judges</em><small>Mann Patira</small></span></li>
+        <li><span>#36 — <em>Same Score, Different Model: Two Regimes of Quantization Damage Below and Above the Accuracy Plateau</em><small>Raj Shah</small></span></li>
+        <li><span>#56 — <em>My Graph Doesn’t Help! Analyzing Causal Graph Construction, Representation, and Utility in LLMs</em><small>Aman Syed, Benjamin Li</small></span></li>
+        <li><span>#60 — <em>Towards Trustworthy Compact Judges: What Human Labels Can and Cannot Fix in Compact AI Judges</em><small>Suchir Salhan, Mingchuan Zou, Paula Buttery</small></span></li>
+        <li><span>#68 — <em>Same Text, Different Prediction: Serving-Context Nondeterminism in Text Classifiers</em><small>Santhosh Kumar Kasa, Siva Rajesh Kasa, Sumit Negi</small></span></li>
+        <li><span>#77 — <em>A 127K-Parameter Cell in a Fixed Horner Program: Exactness, Compression, and a Verified Scaffold for Cross-Prime Modular Multiplication</em><small>Rob Sneiderman</small></span></li>
+      </ul>
     </section>
   </main>
 
